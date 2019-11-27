@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+        <i onclick="like(this)" class="fa fa-thumbs-up" style="font-size:36px"></i><br>
+        <span id="likes">Like</span>
+
+    <script>
+             var LikeCount=0;
+            function like(x){
+                x.classList.toggle("fa-thumbs-down");  
+                var a=document.getElementById('likes');
+                if (a.innerHTML === "Like") {
+                  a.innerHTML = "You Like it";
+                  LikeCount=LikeCount + 1;
+                  console.log(LikeCount);
+                 }
+                  else {
+                  a.innerHTML = "Like";
+                  LikeCount=LikeCount - 1;
+                  console.log(LikeCount);
+                }  
+                 
+            }
+
+    </script>
+
+</body>
+</html>
